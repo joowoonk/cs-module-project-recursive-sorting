@@ -7,10 +7,10 @@ def binary_search(arr, target, start, end):
         middle = (start + end)//2
         if arr[middle] == target:
             return middle
-        elif target < arr[middle]:
-            return binary_search(arr, target, start, end - 1)
+        elif target > arr[middle]:
+            return binary_search(arr, target, middle + 1, end)
         else:
-            return binary_search(arr, target, start + 1, end)
+            return binary_search(arr, target, start, middle -1)
     else:
         return -1
 

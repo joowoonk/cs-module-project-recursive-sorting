@@ -12,9 +12,7 @@
 def merge(arrA, arrB):
     merged_arr = []
 
-    #until one of the arrays has no elements left, add the frontmost element as long as it's smaller
     while (len(arrA) + len(arrB)) > 0:
-        #if one of the arrays is empty, just append the rest of the other one to the new array
         if len(arrA) == 0:
             merged_arr.append(arrB.pop(0))
         elif len(arrB) == 0:
